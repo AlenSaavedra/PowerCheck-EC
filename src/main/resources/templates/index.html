@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/icons/icons8-main-idea-lineal-color-96.png" type="image/png">
+    <title>PowerCheck EC</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+      *{
+        font-family: Poppins, sans-serif;
+        margin: 0;
+        padding: 0; 
+      }
+
+      h1{
+        text-transform: uppercase;
+        text-align: center;
+      }
+
+      .heading span{
+        font-style: italic;
+        background: linear-gradient(
+        to right,
+        #FFD100 33%, /* Amarillo */
+        #005AA7 33%, /* Azul */
+        #005AA7 66%, /* Azul */
+        #EF3340 66% /* Rojo */
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-align: center; /* Opcional */
+      }
+
+      .seleccion{
+        text-align: center;
+        font-weight: 600;
+        color: #000;
+      }
+
+      select:hover{
+        cursor: pointer;
+      }
+
+      input{
+        display: block;
+        width: 97%;
+        font-weight: bold;
+        background: linear-gradient(
+          45deg,
+          rgb(60, 172, 224)  0%,
+          rgba(82, 197, 255, 0.878)  100%
+        );
+        color: white;
+        padding-block: 15px;
+        padding-left: 10px;
+        margin: 15px auto;
+        border-radius: 20px;
+        box-shadow: rgba(91, 178, 221, 0.8784313725) 0px 20px 10px -15px;
+        border: none;
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
+        outline: none;
+          
+      }
+      
+      .opciones{
+        display: block;
+        width: 100%;
+        font-weight: bold;
+        background: linear-gradient(
+          45deg,
+          rgb(60, 172, 224)  0%,
+          rgba(82, 197, 255, 0.878)  100%
+        );
+        color: white;
+        padding-block: 15px;
+        padding-left: 10px;
+        margin: 15px auto;
+        border-radius: 20px;
+        box-shadow: rgba(91, 178, 221, 0.644) 0px 20px 10px -15px;
+        border: none;
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
+      }
+      .opciones option{
+        color: #000;
+  
+      }
+      /* Contenedor externo para centrar */
+      .wrapper {
+        display: flex;
+        justify-content: center; /* Centra horizontalmente */
+        align-items: center; /* Centra verticalmente */
+        height: 100vh; /* Ocupa toda la altura de la ventana */
+        background: linear-gradient(135deg, #d3d3d3, #f5f5f5, #c0c0c0); /* Gris espejo */
+        margin: 0; /* Elimina márgenes del body si es necesario */
+      }
+      .container {
+        max-width: 800px;
+        background: #f8f9fd;
+        background: linear-gradient(
+        0deg,
+        rgb(255, 255, 255) 0%,
+        rgb(244, 247, 251) 100%
+        );
+        border-radius: 40px;
+        padding: 25px 35px;
+        border: 5px solid rgb(255, 255, 255);
+        box-shadow: rgba(231, 231, 231, 0.452) 0px 30px 30px -20px;
+        margin: 20px;
+      }
+      .heading {
+        text-align: center;
+        font-weight: 900;
+        font-size: 30px;
+        text-transform: uppercase;
+        color: #005AA7 ;
+      }
+      .form {
+        margin-top: 20px;
+      }
+      .form .input {
+        width: 100%;
+        background: white;
+        border: none;
+        padding: 15px 20px;
+        border-radius: 20px;
+        margin-top: 15px;
+        box-shadow: #cff0ff 0px 10px 10px -5px;
+        border-inline: 2px solid transparent;
+      }
+      .form .input::-moz-placeholder {
+        color: rgb(170, 170, 170);
+      }
+      .form .input::placeholder {
+        color: rgb(170, 170, 170);
+      }
+      .form .input:focus {
+        outline: none;
+        border-inline: 2px solid #12b1d1;
+      }
+      .form .forgot-password {
+        display: block;
+        margin-top: 10px;
+        margin-left: 10px;
+      }
+      .form .forgot-password a {
+        font-size: 11px;
+        color: #005AA7;
+      }
+      .form .login-button {
+        display: block;
+        width: 100%;
+        font-weight: bold;
+        background: linear-gradient(
+          45deg,
+          #005AA7 0%,
+          rgb(18, 177, 209) 100%
+        );
+        color: white;
+        padding-block: 15px;
+        margin: 20px auto;
+        border-radius: 20px;
+        box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 20px 10px -15px;
+        border: none;
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
+      }
+      .form .login-button:hover {
+        transform: scale(1.03);
+        box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 23px 10px -20px;
+      }
+      .form .login-button:active {
+        transform: scale(0.95);
+        box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 15px 10px -10px;
+      }
+      .social-account-container {
+        margin-top: 25px;
+      }
+      .social-account-container .title {
+        display: block;
+        text-align: center;
+        font-size: 10px;
+        color: rgb(170, 170, 170);
+      }
+      .social-account-container .social-accounts {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 5px;
+      }
+      .social-account-container .social-accounts .social-button {
+        background: linear-gradient(45deg, rgb(0, 0, 0) 0%, rgb(112, 112, 112) 100%);
+        border: 5px solid white;
+        padding: 5px;
+        border-radius: 50%;
+        width: 40px;
+        aspect-ratio: 1;
+        display: grid;
+        place-content: center;
+        box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 12px 10px -8px;
+        transition: all 0.2s ease-in-out;
+      }
+      .social-account-container .social-accounts .social-button .svg {
+        fill: white;
+        margin: auto;
+      }
+      .social-account-container .social-accounts .social-button:hover {
+        transform: scale(1.2);
+      }
+      .social-account-container .social-accounts .social-button:active {
+        transform: scale(0.9);
+      }
+      .agreement {
+        display: block;
+        text-align: center;
+        margin-top: 15px;
+      }
+      .agreement a {
+        text-decoration: none;
+        color: #005AA7;
+        font-size: 9px;
+      }
+      .title-form{
+        color: #000;
+        font-size: 30px;
+      }
+      /* Media queries para móvil (414px) */
+      @media screen and (max-width: 414px) {
+        .container {
+          margin: 10px;
+          padding: 15px 20px;
+          border-radius: 25px;
+          border-width: 3px;
+        }
+      
+        .heading {
+          font-size: 24px;
+        }
+      
+        .title-form {
+          font-size: 22px;
+        }
+      
+        .form .input {
+          padding: 12px 15px;
+          margin-top: 12px;
+        }
+      
+        .form .login-button {
+          padding-block: 12px;
+          margin: 15px auto;
+        }
+      
+        input {
+          width: 97%;
+          padding-block: 12px;
+          padding-left: 8px;
+          margin: 10px auto;
+        }
+      
+        .opciones {
+          width: 100%;
+          padding-block: 12px;
+          padding-left: 8px;
+          margin: 10px auto;
+        }
+      
+        .social-account-container {
+          margin-top: 20px;
+        }
+      
+        .social-account-container .social-accounts {
+          gap: 10px;
+        }
+      
+        .social-account-container .social-accounts .social-button {
+          width: 35px;
+          padding: 4px;
+        }
+      
+        .wrapper {
+          padding: 10px;
+        }
+      
+        .agreement {
+          margin-top: 12px;
+        }
+      
+        .agreement a {
+          font-size: 8px;
+        }
+      }
+
+      /* Media query para ajustes de altura */
+      @media screen and (max-height: 896px) {
+        .wrapper {
+          min-height: 100vh;
+          padding: 10px 0;
+        }
+      
+        .container {
+          margin: 10px auto;
+        }
+      }
+    </style>
+  </head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+
+            <div class="heading">Consulta tu horario <br><span class="title-form">CNEL EP</span></div>
+      
+            <form class="form" action="/consulta" method="POST">
+      
+              <label class="seleccion" for="documentType">Tipo de Documento:</label><br>
+      
+              <select class="opciones" name="documentType" id="documentType" required>
+                  <option value="IDENTIFICACION">Cédula de Identidad</option>
+                  <option value="CUENTA_CONTRATO">Número de Contrato</option>
+                  <option value="CUEN">Código Único</option>
+              </select>
+      
+              <label class="seleccion" for="documentNumber">Número de Documento:</label><br>
+              <input type="text" name="documentNumber" id="documentNumber" required><br>
+      
+              <button type="submit" class="login-button">Consultar Cortes</button>
+      
+              <span class="forgot-password"><a target="_blank" href="https://cnel-schedules.vercel.app/terms">Términos y condiciones</a></span>
+      
+            </form>
+      
+            <span class="agreement"><a target="_blank" href="https://serviciosenlinea.cnelep.gob.ec/cortes-energia/">Información obtenida de CNEL EP</a></span>
+          
+          </div>
+    </div>
+
+</body>
+</html>
+
+<!-- FORM BASICO -->
+<!-- <h1>Consulta Cortes de Luz - <span>CNEL EC</span></h1>
+    <form action="/consulta" method="POST">
+        <label class="seleccion" for="documentType">Tipo de Documento:</label><br>
+        <select  name="documentType" id="documentType" required>
+            <option value="IDENTIFICACION">Cédula de Identidad</option>
+            <option value="CUENTA_CONTRATO">Número de Contrato</option>
+            <option value="CUEN">Código Único</option>
+        </select><br><br>
+
+        <label for="documentNumber">Número de Documento:</label><br>
+        <input type="text" name="documentNumber" id="documentNumber" required><br><br>
+
+        <button type="submit">Consultar Cortes</button>
+    </form> -->
