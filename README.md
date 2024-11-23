@@ -55,7 +55,8 @@ La aplicación permite a los usuarios ingresar su documento de identidad, códig
 2. **Ver los resultados**:  
    Una vez que hayas ingresado la información, presiona el botón para consultar. Los resultados de la consulta se mostrarán en la página.
 
-   ![Resultado de la consulta](![image](https://github.com/user-attachments/assets/0aa10e5c-ebb7-42f8-8704-e9ade3c4fff5)
+   ![Resultado de la consulta] ![image](https://github.com/user-attachments/assets/9906f611-f5e5-4110-ae2c-eb82ac0b5764)
+
 )
 )
 
