@@ -49,13 +49,11 @@ La aplicación permite a los usuarios ingresar su documento de identidad, códig
 1. **Ingresa tu documento de identidad, código único o número de contrato**:  
    Para comenzar la consulta, ingresa tu información en el campo correspondiente.
 
-   **Ingresar documento de identidad, número de contrato o  código único**
    ![Consulta](https://github.com/user-attachments/assets/92d7a9b9-6838-45dc-a9f0-a92434742be6)
 
 2. **Ver los resultados**:  
    Una vez que hayas ingresado la información, presiona el botón para consultar. Los resultados de la consulta se mostrarán en la página.
 
-   **Resultado de la consulta**
    ![image](https://github.com/user-attachments/assets/9906f611-f5e5-4110-ae2c-eb82ac0b5764)
 
 
