@@ -1,7 +1,7 @@
 services:
   - type: web
     name: powercheck-ec
-    env: docker
+    env: java
     buildCommand: |
       chmod +x ./mvnw
       ./mvnw clean install
