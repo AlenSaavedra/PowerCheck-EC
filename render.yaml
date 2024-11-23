@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: powercheck-ec
+    env: docker
+    buildCommand: |
+      chmod +x ./mvnw
+      ./mvnw clean install
+    startCommand: |
+      ./mvnw spring-boot:run
