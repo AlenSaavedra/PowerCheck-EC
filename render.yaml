@@ -3,7 +3,7 @@ services:
     name: powercheck-ec
     env: java
     buildCommand: |
-      export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+      export JAVA_HOME=/usr/lib/jvm/java-23-openjdk-amd64
       chmod +x ./mvnw
       ./mvnw clean install
     startCommand: |
