@@ -1,73 +1,72 @@
 # PowerCheck EC
 
-**PowerCheck EC** es una aplicación web que permite a los clientes de CNEL (Corporación Nacional de Electricidad) en Ecuador consultar los cortes de luz a nivel nacional. El sistema utiliza una API pública de CNEL y está desarrollado con **Java Spring Boot** en el backend y **Thymeleaf** en el frontend.
+**PowerCheck EC** is a web application that allows CNEL (Corporación Nacional de Electricidad) customers in Ecuador to check power outages nationwide. The system uses a public CNEL API and is developed with **Java Spring Boot** in the backend and **Thymeleaf** in the frontend.
 
-## Descripción
+## Description
 
-La aplicación permite a los usuarios ingresar su documento de identidad, código único o número de contrato para consultar si existen cortes de luz en su localidad. La respuesta se obtiene de la API pública de CNEL, mostrando la información correspondiente sobre los cortes de energía programados o emergentes.
+The application allows the user to enter their identity document, unique code or contract number to check if there are power outages in their location. The response is obtained from the CNEL public API, showing the corresponding information about scheduled or emergency power outages.
 
-## Características
+## Features
 
-- Consulta de cortes de luz a nivel nacional.
-- Soporte para los clientes de CNEL con número de contrato o documento de identidad.
-- Interfaz de usuario intuitiva utilizando Thymeleaf.
-- Obtención de datos en tiempo real desde la API pública de CNEL.
+- Query of power outages nationwide.
+- Support for CNEL customers with contract number or identity document.
+- Intuitive user interface using Thymeleaf.
+- Obtaining data in real time from the CNEL public API.
 
-## Tecnologías Utilizadas
+## Technologies Used
 
-- **Java Spring Boot**: Framework para el backend.
-- **Thymeleaf**: Plantilla para el frontend.
-- **API pública de CNEL**: Para obtener información sobre cortes de luz.
-- **Maven**: Para la gestión de dependencias y construcción del proyecto.
+- **Java Spring Boot**: Framework for the backend.
+- **Thymeleaf**: Frontend template.
+- **CNEL Public API**: For getting information about interruptions.
+- **Maven**: For dependency management and project creation.
 
-## Instalación
+## Installation
 
-1. Clona este repositorio:
-   ```bash
-   git clone https://github.com/usuario/PowerCheck-EC.git
-   ```
+1. Clone this repository:
+```bash
+git clone https://github.com/user/PowerCheck-EC.git
+```
 
-2. Navega al directorio del proyecto:
-   ```bash
-   cd PowerCheck-EC
-   ```
+2. Navigate to the project directory:
+```bash
+cd PowerCheck-EC
+```
 
-3. Instala las dependencias con Maven:
-   ```bash
-   mvn install
-   ```
+3. Install the dependencies with Maven:
+```bash
+mvn install
+```
 
-4. Ejecuta el proyecto:
-   ```bash
-   mvn spring-boot:run
-   ```
+4. Run the project:
+```bash
+mvn spring-boot:run
+```
 
-5. Accede a la aplicación desde tu navegador en [http://localhost:8080](http://localhost:8080).
+5. Access the application from your browser at [http://localhost:8080](http://localhost:8080).
 
-## Uso
+## Usage
 
-1. **Ingresa tu documento de identidad, código único o número de contrato**:  
-   Para comenzar la consulta, ingresa tu información en el campo correspondiente.
+1. **Enter your ID, unique code, or contract number**:
+To start the query, enter your information in the corresponding field.
 
-   ![Consulta](https://github.com/user-attachments/assets/92d7a9b9-6838-45dc-a9f0-a92434742be6)
+![Query](https://github.com/user-attachments/assets/92d7a9b9-6838-45dc-a9f0-a92434742be6)
 
-2. **Ver los resultados**:  
-   Una vez que hayas ingresado la información, presiona el botón para consultar. Los resultados de la consulta se mostrarán en la página.
+2. **View the results**:
+Once you have entered the information, press the button to perform the query. The results of the query will be displayed on the page.
 
-   ![image](https://github.com/user-attachments/assets/9906f611-f5e5-4110-ae2c-eb82ac0b5764)
+![image](https://github.com/user-attachments/assets/9906f611-f5e5-4110-ae2c-eb82ac0b5764)
 
+## Contributions
 
-## Contribuciones
+If you want to contribute to this project, follow these steps:
 
-Si deseas contribuir a este proyecto, sigue estos pasos:
+1. Fork this repository.
+2. Create a branch with your new feature (`git checkout -b feature/my-new-feature`).
+3. Commit your changes.
+4. Commit your changes (`git commit -m 'Add new feature'`).
+5. Push your changes to your repository (`git push origin feature/my-new-feature`).
+6. Open a pull request.
 
-1. Haz un fork de este repositorio.
-2. Crea una rama con tu nueva funcionalidad (`git checkout -b feature/mi-nueva-funcionalidad`).
-3. Realiza tus cambios.
-4. Haz un commit con tus cambios (`git commit -m 'Añadir nueva funcionalidad'`).
-5. Empuja tus cambios a tu repositorio (`git push origin feature/mi-nueva-funcionalidad`).
-6. Abre un pull request.
+## License
 
-## Licencia
-
-Este proyecto está bajo la Licencia MIT. Ver el archivo [LICENSE](LICENSE) para más detalles.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
